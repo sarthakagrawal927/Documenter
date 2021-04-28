@@ -1,12 +1,15 @@
-import EventComponent from "../events/EventComponent";
-import UserSearch from "../refs/UserSearch";
+import { Provider } from "react-redux";
+import { store } from "../state";
+import RepositoriesList from "../components/RepositoriesList";
 
 const App = () => {
   return (
-    <div>
-      <EventComponent />
-      <UserSearch />
-    </div>
+    <Provider store={store}>
+      <div>
+        <h1>List</h1>
+        <RepositoriesList />
+      </div>
+    </Provider>
   );
 };
 
