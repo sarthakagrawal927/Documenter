@@ -8,8 +8,10 @@ specifiers:
   '@types/node': ^15.0.1
   '@types/react': ^17.0.4
   '@types/react-dom': ^17.0.3
+  axios: ^0.21.1
   dotenv: ^8.2.0
   esbuild-wasm: 0.8.27
+  localforage: ^1.9.0
   next: ^10.1.3
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -24,7 +26,9 @@ dependencies:
   '@types/node': 15.0.1
   '@types/react': 17.0.4
   '@types/react-dom': 17.0.3
+  axios: 0.21.1
   esbuild-wasm: 0.8.27
+  localforage: 1.9.0
   next: 10.1.3_507781d099a67956587e23f5ac79078b
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -371,6 +375,14 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       array-filter: 1.0.0
+    dev: false
+
+  /axios/0.21.1:
+    resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
+    dependencies:
+      follow-redirects: 1.14.0
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   /babel-plugin-syntax-jsx/6.18.0:
@@ -891,6 +903,16 @@ packages:
       path-exists: 4.0.0
     dev: false
 
+  /follow-redirects/1.14.0:
+    resolution: {integrity: sha512-0vRwd7RKQBTt+mgu87mtYeofLFZpTas2S9zY+jIeuLJMNvudIgF52nr19q40HOwH5RrhWIPuj9puybzSJiRrVg==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
+
   /foreach/2.0.5:
     resolution: {integrity: sha1-C+4AUBiusmDQo6865ljdATbsG5k=}
     dev: false
@@ -1021,6 +1043,10 @@ packages:
 
   /ieee754/1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
+    dev: false
+
+  /immediate/3.0.6:
+    resolution: {integrity: sha1-nbHb0Pr43m++D13V5Wu2BigN5ps=}
     dev: false
 
   /indent-string/4.0.0:
@@ -1192,6 +1218,12 @@ packages:
       minimist: 1.2.5
     dev: false
 
+  /lie/3.1.1:
+    resolution: {integrity: sha1-mkNrLMd0bKWd56QfpGmz77dr2H4=}
+    dependencies:
+      immediate: 3.0.6
+    dev: false
+
   /line-column/1.0.2:
     resolution: {integrity: sha1-0lryk2tvSEkXKzEuR5LR2Ye8NKI=}
     dependencies:
@@ -1206,6 +1238,12 @@ packages:
       big.js: 5.2.2
       emojis-list: 2.1.0
       json5: 1.0.1
+    dev: false
+
+  /localforage/1.9.0:
+    resolution: {integrity: sha512-rR1oyNrKulpe+VM9cYmcFn6tsHuokyVHFaCM3+osEmxaHTbEk8oQu6eGDfS6DQLWi/N67XRmB8ECG37OES368g==}
+    dependencies:
+      lie: 3.1.1
     dev: false
 
   /locate-path/5.0.0:
