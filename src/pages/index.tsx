@@ -33,6 +33,7 @@ const App = () => {
         global: "window",
       },
     });
+
     setCode(result.outputFiles[0].text);
   };
 
@@ -45,7 +46,9 @@ const App = () => {
         <button onClick={onClick}>Submit</button>
       </div>
       <pre>{code}</pre>
-      <iframe src='' frameBorder='10'></iframe>
+      <iframe src='/test.html' frameBorder='10' sandbox=''></iframe>
+      {/* iframe will let us to make sure that our app and user's code remain in
+      defferent contexts */}
     </div>
   );
 };

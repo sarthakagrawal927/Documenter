@@ -22,3 +22,5 @@ TS with Redux
 LocalForage
 ESbuild packager.
 iframe
+
+I will be continuing this to brush up react.
