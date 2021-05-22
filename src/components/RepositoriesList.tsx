@@ -7,7 +7,7 @@ const RepositoriesList: React.FC = () => {
   const { searchRepositories } = useActions();
 
   const { data, error, loading } = useTypedSelector(
-    (state) => state.repositories,
+    (state: { repositories: any }) => state.repositories,
   );
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,7 +25,7 @@ const RepositoriesList: React.FC = () => {
       {loading && <h3>loading..</h3>}
       {!error &&
         !loading &&
-        data.map((name, index) => <h5 key={index}>{name}</h5>)}
+        data.map((name: string, index: number) => <h5 key={index}>{name}</h5>)}
     </div>
   );
 };
